@@ -1,26 +1,26 @@
 export default function ReportsPage() {
-  const reports = [
-    {
-      title: "Project Proposal",
-      file: "/reports/Project_Proposal.pdf",
-      description: "Initial project proposal and objectives",
-    },
-    {
-      title: "Project Specifications Report",
-      file: "/reports/Project_Specifications.pdf",
-      description: "Detailed system requirements and specifications",
-    },
-    {
-      title: "High Level Design Report",
-      file: "/reports/HighLevelDesign.pdf",
-      description: "Overall system architecture and design decisions",
-    },
-    {
-      title: "Analysis Report",
-      file: "/reports/Analysis.pdf",
-      description: "Problem analysis, methodology, and evaluation",
-    },
-  ];
+const reports = [
+  {
+    title: "Project Proposal",
+    file: "/reports/Project_Proposal.pdf",
+    description: "Initial project proposal and objectives",
+  },
+  {
+    title: "Project Specifications Report",
+    file: "/reports/Project_Specifications.pdf",
+    description: "Detailed system requirements and specifications",
+  },
+  {
+    title: "Analysis Report",
+    file: "/reports/Analysis.pdf",
+    description: "Problem analysis, methodology, and evaluation",
+  },
+  {
+    title: "High Level Design Report",
+    file: "/reports/HighLevelDesign.pdf",
+    description: "Overall system architecture and design decisions",
+  },
+];
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-green-50 to-white py-24 px-6">
