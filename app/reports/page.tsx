@@ -6,12 +6,12 @@ export default function ReportsPage() {
       description: "Initial project proposal and objectives",
     },
     {
-      title: "Project Specifications",
+      title: "Project Specifications Report",
       file: "/reports/Project_Specifications.pdf",
       description: "Detailed system requirements and specifications",
     },
     {
-      title: "High Level Design",
+      title: "High Level Design Report",
       file: "/reports/HighLevelDesign.pdf",
       description: "Overall system architecture and design decisions",
     },
