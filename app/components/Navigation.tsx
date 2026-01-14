@@ -22,6 +22,7 @@ export default function Navigation() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Reports', href: '/reports' },
   ];
 
   return (
@@ -69,7 +70,7 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (değiştirmedik) */}
           <motion.button
             className={`md:hidden p-2 rounded-lg ${
               isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'
@@ -93,4 +94,3 @@ export default function Navigation() {
     </motion.nav>
   );
 }
-
