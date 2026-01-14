@@ -1,0 +1,53 @@
+export default function ReportsPage() {
+  return (
+    <main className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-bold mb-8">Project Reports</h1>
+
+      <ul className="space-y-4 text-lg">
+        <li>
+          📄{" "}
+          <a
+            href="/reports/Project_Proposal.pdf"
+            target="_blank"
+            className="text-green-600 underline"
+          >
+            Project Proposal
+          </a>
+        </li>
+
+        <li>
+          📄{" "}
+          <a
+            href="/reports/Project_Specifications.pdf"
+            target="_blank"
+            className="text-green-600 underline"
+          >
+            Project Specifications Report
+          </a>
+        </li>
+
+        <li>
+          📄{" "}
+          <a
+            href="/reports/HighLevelDesign.pdf"
+            target="_blank"
+            className="text-green-600 underline"
+          >
+            High-Level Design Report
+          </a>
+        </li>
+
+        <li>
+          📄{" "}
+          <a
+            href="/reports/Analysis.pdf"
+            target="_blank"
+            className="text-green-600 underline"
+          >
+            Analysis Report
+          </a>
+        </li>
+      </ul>
+    </main>
+  );
+}
