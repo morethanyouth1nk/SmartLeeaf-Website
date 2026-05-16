@@ -73,9 +73,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              SmartLeaf transforms leaf photos into AI-powered plant health
-              insights, helping users detect visible disease symptoms, estimate
-              health scores, and understand possible nutrient stress.
+              Upload a leaf image and try SmartLeaf's AI-powered analysis system
+              for plant disease prediction, health scoring, and nutrient stress
+              indication through a simple web interface.
             </motion.p>
 
             <motion.div
