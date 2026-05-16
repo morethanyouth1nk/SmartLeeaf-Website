@@ -132,21 +132,6 @@ export default function Hero() {
             <div className="absolute -left-6 top-10 h-24 w-24 rounded-3xl bg-lime-300/30 blur-2xl" />
             <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-emerald-200/25 blur-3xl" />
 
-            <motion.div
-              className="absolute -left-8 top-16 z-20 hidden rounded-2xl border border-white/50 bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md md:block"
-              animate={{ y: [0, -8, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className="text-xs font-bold text-gray-500">Upload</p>
-              <p className="text-sm font-extrabold text-emerald-800">
-                leaf_image.jpg
-              </p>
-            </motion.div>
-
             <div className="glass-card relative overflow-hidden rounded-[2rem] border border-white/50 p-5 shadow-2xl shadow-black/25">
               <div className="rounded-[1.5rem] bg-slate-950 p-4 text-white">
                 <div className="mb-4 flex items-center justify-between">
