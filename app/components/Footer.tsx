@@ -25,8 +25,8 @@ export default function Footer() {
       <div className="absolute left-[-8rem] top-[-8rem] h-80 w-80 rounded-full bg-lime-300/10 blur-3xl" />
       <div className="absolute bottom-[-10rem] right-[-8rem] h-96 w-96 rounded-full bg-emerald-300/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.4fr_0.7fr_1fr]">
           <div>
             <motion.a
               href="#home"
