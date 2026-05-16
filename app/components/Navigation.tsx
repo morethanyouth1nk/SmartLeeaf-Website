@@ -26,6 +26,7 @@ export default function Navigation() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Reports', href: '/reports' },
   ];
 
   const textColor = isScrolled ? 'text-gray-900' : 'text-white';
@@ -86,16 +87,18 @@ export default function Navigation() {
             ))}
 
             <motion.a
-              href="/reports"
-              className={`ml-2 rounded-full px-5 py-2.5 text-sm font-extrabold transition-all ${
+              href="https://smart-leaf-beta.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`ml-3 rounded-full px-6 py-3 text-base font-extrabold transition-all ${
                 isScrolled
-                  ? 'bg-emerald-700 text-white shadow-lg shadow-emerald-900/15 hover:bg-emerald-800'
-                  : 'bg-white text-emerald-800 shadow-lg shadow-black/15 hover:bg-lime-100'
+                  ? 'bg-emerald-700 text-white shadow-lg shadow-emerald-900/20 hover:bg-emerald-800'
+                  : 'bg-white text-emerald-800 shadow-xl shadow-black/20 hover:bg-lime-100'
               }`}
-              whileHover={{ y: -2, scale: 1.03 }}
+              whileHover={{ y: -2, scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
             >
-              Reports
+              Try Demo
             </motion.a>
           </div>
 
@@ -147,15 +150,17 @@ export default function Navigation() {
               ))}
 
               <a
-                href="/reports"
+                href="https://smart-leaf-beta.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className={`mt-2 rounded-2xl px-4 py-3 text-sm font-extrabold ${
+                className={`mt-2 rounded-2xl px-4 py-3 text-base font-extrabold ${
                   isScrolled
                     ? 'bg-emerald-700 text-white'
                     : 'bg-white text-emerald-800'
                 }`}
               >
-                Reports
+                Try Demo
               </a>
             </div>
           </motion.div>
