@@ -3,8 +3,14 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { GiPlantSeed, GiPlantRoots } from 'react-icons/gi';
-import { FaSun, FaTint, FaChartBar } from 'react-icons/fa';
+import {
+  FaLeaf,
+  FaChartLine,
+  FaFilePdf,
+  FaGlobe,
+  FaShieldAlt,
+  FaSeedling,
+} from 'react-icons/fa';
 
 export default function Features() {
   const ref = useRef(null);
@@ -12,111 +18,117 @@ export default function Features() {
 
   const features = [
     {
-      icon: <GiPlantSeed className="text-5xl" />,
-      title: 'Disease Detection',
+      icon: <FaLeaf className="text-3xl" />,
+      title: 'Disease Classification',
       description:
-        'Instantly identify common crop diseases using deep learning models trained on thousands of leaf images.',
-      color: 'from-red-500 to-pink-500',
+        'Analyzes uploaded leaf images and classifies visible plant disease symptoms using AI-based image analysis.',
+      color: 'from-rose-500 to-orange-500',
     },
     {
-      icon: <GiPlantRoots className="text-5xl" />,
-      title: 'Health Scoring',
+      icon: <FaChartLine className="text-3xl" />,
+      title: 'Health Score Estimation',
       description:
-        'Evaluate plant vitality by analyzing color, texture, and leaf patterns to generate a health score.',
-      color: 'from-green-500 to-emerald-500',
+        'Generates a numerical health score to help users understand the overall condition of the analyzed leaf.',
+      color: 'from-emerald-600 to-green-500',
     },
     {
-      icon: <FaSun className="text-5xl" />,
-      title: 'Growth Monitoring',
+      icon: <FaSeedling className="text-3xl" />,
+      title: 'Nutrient Stress Indication',
       description:
-        'Track plant development over time with image-based analysis of size and color changes.',
-      color: 'from-yellow-500 to-orange-500',
+        'Provides suggestive nutrient stress indicators based on visible color and texture patterns observed on the leaf.',
+      color: 'from-lime-500 to-emerald-500',
     },
     {
-      icon: <FaTint className="text-5xl" />,
-      title: 'Nutrient & Water Stress Detection',
+      icon: <FaFilePdf className="text-3xl" />,
+      title: 'PDF Report Export',
       description:
-        'Detect early signs of deficiencies or dehydration before they visibly affect the crop.',
-      color: 'from-blue-500 to-cyan-500',
+        'Allows users to download structured reports containing analysis results, confidence information, and health feedback.',
+      color: 'from-amber-500 to-orange-500',
     },
     {
-      icon: <FaChartBar className="text-5xl" />,
-      title: 'Smart Reports',
+      icon: <FaGlobe className="text-3xl" />,
+      title: 'Web-Based Accessibility',
       description:
-        'View detailed analysis results, trends, and recommendations in an easy-to-read dashboard.',
-      color: 'from-purple-500 to-indigo-500',
+        'Runs through a browser-based interface, making the system easy to access from desktop and mobile devices.',
+      color: 'from-sky-500 to-cyan-500',
+    },
+    {
+      icon: <FaShieldAlt className="text-3xl" />,
+      title: 'Responsible AI Feedback',
+      description:
+        'Presents outputs with confidence scores and guidance-oriented wording instead of definitive agricultural diagnosis.',
+      color: 'from-violet-500 to-indigo-500',
     },
   ];
 
   return (
     <section
       id="features"
-      className="py-20 md:py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900"
+      className="relative overflow-hidden bg-white py-20 md:py-32"
       ref={ref}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute right-[-8rem] top-16 h-96 w-96 rounded-full bg-emerald-100/70 blur-3xl" />
+      <div className="absolute bottom-[-12rem] left-[-8rem] h-96 w-96 rounded-full bg-lime-100/80 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          initial={{ opacity: 0, y: 45 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 45 }}
+          transition={{ duration: 0.75 }}
+          className="mx-auto mb-16 max-w-3xl text-center"
         >
           <motion.div
-            className="inline-block px-4 py-2 mb-4 bg-green-100 dark:bg-green-900/30 rounded-full text-green-600 dark:text-green-400 font-medium"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
+            className="mb-4 inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-extrabold text-emerald-700"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ duration: 0.45 }}
           >
             Core Features
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            What SmartLeaf Can Do
+          <h2 className="text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+            Practical AI capabilities for
+            <br />
+            <span className="text-emerald-700">plant health analysis</span>
           </h2>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Powerful AI capabilities designed for modern agriculture
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            SmartLeaf focuses on clear, interpretable outputs that support leaf-based
+            disease evaluation, health scoring, nutrient stress awareness, and
+            report generation.
           </p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              key={feature.title}
+              initial={{ opacity: 0, y: 45 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 45 }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+              whileHover={{ y: -8 }}
               className="group relative"
             >
-              <div className="relative h-full p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                {/* Gradient background on hover */}
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+              <div className="relative h-full overflow-hidden rounded-[1.6rem] border border-gray-100 bg-white p-7 shadow-sm transition-all duration-300 hover:border-emerald-100 hover:shadow-2xl hover:shadow-emerald-950/8">
+                <div
+                  className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${feature.color}`}
                 />
 
-                {/* Icon */}
-                <motion.div
-                  className={`inline-flex items-center justify-center w-20 h-20 mb-6 bg-gradient-to-br ${feature.color} text-white rounded-2xl shadow-lg`}
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
+                <div
+                  className={`mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${feature.color} text-white shadow-lg`}
                 >
                   {feature.icon}
-                </motion.div>
+                </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-2xl font-bold text-gray-950">
                   {feature.title}
                 </h3>
 
-                {/* Description */}
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="mt-4 leading-7 text-gray-600">
                   {feature.description}
                 </p>
 
-                {/* Decorative element */}
-                <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-transparent to-gray-100 dark:to-gray-700 rounded-tl-full opacity-50" />
+                <div className="absolute -bottom-14 -right-14 h-32 w-32 rounded-full bg-gradient-to-br from-emerald-50 to-lime-50 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </div>
             </motion.div>
           ))}
@@ -125,4 +137,3 @@ export default function Features() {
     </section>
   );
 }
-
