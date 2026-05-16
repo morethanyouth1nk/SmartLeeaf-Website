@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { FaLeaf, FaChartLine, FaMobileAlt } from 'react-icons/fa';
+import { FaLeaf, FaChartLine, FaGlobe } from 'react-icons/fa';
 
 export default function About() {
   const ref = useRef(null);
@@ -11,76 +11,138 @@ export default function About() {
 
   const highlights = [
     {
-      icon: <FaLeaf className="text-4xl" />,
-      title: 'AI-Powered',
-      description: 'Advanced deep learning models',
+      icon: <FaLeaf className="text-3xl" />,
+      title: 'Leaf-Based Analysis',
+      description:
+        'Users upload a plant leaf image and receive structured AI-supported plant health feedback.',
     },
     {
-      icon: <FaChartLine className="text-4xl" />,
-      title: 'Accurate',
-      description: 'Precise disease detection',
+      icon: <FaChartLine className="text-3xl" />,
+      title: 'Health Insights',
+      description:
+        'SmartLeaf presents disease prediction, confidence score, health score, and possible nutrient stress indication.',
     },
     {
-      icon: <FaMobileAlt className="text-4xl" />,
-      title: 'Accessible',
-      description: 'Simple web interface',
+      icon: <FaGlobe className="text-3xl" />,
+      title: 'Accessible Platform',
+      description:
+        'The system runs through a simple web interface designed for farmers, students, and agricultural researchers.',
     },
   ];
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-white dark:bg-gray-900" ref={ref}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+    <section
+      id="about"
+      className="relative overflow-hidden bg-[#f8faf7] py-20 md:py-32"
+      ref={ref}
+    >
+      <div className="absolute left-[-8rem] top-24 h-80 w-80 rounded-full bg-emerald-200/35 blur-3xl" />
+      <div className="absolute bottom-[-10rem] right-[-8rem] h-96 w-96 rounded-full bg-lime-200/45 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-14 lg:grid-cols-[0.95fr_1.05fr]">
           <motion.div
-            className="inline-block px-4 py-2 mb-4 bg-green-100 dark:bg-green-900/30 rounded-full text-green-600 dark:text-green-400 font-medium"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
+            transition={{ duration: 0.75 }}
           >
-            About SmartLeaf
+            <div className="inline-flex rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-extrabold text-emerald-700 shadow-sm">
+              About SmartLeaf
+            </div>
+
+            <h2 className="mt-6 text-4xl font-bold leading-tight text-gray-950 md:text-5xl">
+              AI support for clearer
+              <br />
+              <span className="text-emerald-700">plant health decisions</span>
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              SmartLeaf is a web-based decision-support system that uses
+              computer vision and deep learning to analyze plant leaf images. It
+              helps users identify visible disease symptoms, estimate plant
+              health, and generate structured reports through a simple
+              interface.
+            </p>
+
+            <p className="mt-5 text-base leading-7 text-gray-500">
+              The system is designed to support awareness and early evaluation.
+              Its outputs are presented with confidence information and should
+              be interpreted as guidance rather than a definitive agricultural
+              diagnosis.
+            </p>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Bringing Artificial Intelligence
-            <br />
-            <span className="text-green-600">to Everyday Farming</span>
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
+            transition={{ duration: 0.75, delay: 0.1 }}
+            className="rounded-[2rem] border border-emerald-100 bg-white p-4 shadow-2xl shadow-emerald-950/8"
+          >
+            <div className="rounded-[1.5rem] bg-gradient-to-br from-emerald-950 via-emerald-800 to-green-700 p-8 text-white">
+              <p className="text-sm font-bold uppercase tracking-[0.28em] text-lime-300">
+                Project Focus
+              </p>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            SmartLeaf is an AI-powered plant analysis system that helps farmers, agronomists, and
-            researchers understand plant health using just a photo. Our mission is to make advanced
-            plant diagnostics accessible, accurate, and affordable for everyone. With SmartLeaf,
-            users can instantly detect diseases, identify nutrient deficiencies, and track growth
-            all through a simple web interface.
-          </p>
-        </motion.div>
+              <h3 className="mt-4 text-3xl font-bold">
+                From leaf image to actionable insight
+              </h3>
 
-        {/* Highlights Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+              <div className="mt-8 grid gap-4">
+                <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold">Disease Classification</span>
+                    <span className="rounded-full bg-lime-300/20 px-3 py-1 text-xs font-bold text-lime-200">
+                      AI Model
+                    </span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold">Health Score</span>
+                    <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white">
+                      0–100
+                    </span>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl bg-white/10 p-5 backdrop-blur-md">
+                  <div className="flex items-center justify-between">
+                    <span className="font-bold">PDF Report Export</span>
+                    <span className="rounded-full bg-amber-300/20 px-3 py-1 text-xs font-bold text-amber-100">
+                      Downloadable
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
           {highlights.map((item, index) => (
             <motion.div
-              key={index}
+              key={item.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 hover:shadow-xl transition-shadow"
+              transition={{ duration: 0.55, delay: index * 0.15 }}
+              className="group rounded-[1.5rem] border border-emerald-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-950/8"
             >
               <motion.div
-                className="inline-flex items-center justify-center w-16 h-16 mb-4 bg-green-600 text-white rounded-full"
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-white shadow-lg shadow-emerald-900/15"
+                whileHover={{ scale: 1.08, rotate: 4 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
                 {item.icon}
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+
+              <h3 className="text-xl font-bold text-gray-950">
                 {item.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+
+              <p className="mt-3 leading-7 text-gray-600">
+                {item.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -88,4 +150,3 @@ export default function About() {
     </section>
   );
 }
-
