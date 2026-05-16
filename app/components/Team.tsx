@@ -18,7 +18,7 @@ const team = [
     gradient: 'from-green-500 to-emerald-500',
   },
   {
-    name: 'Yusuf Kaynakçı',
+    name: 'Yusuf Kaynakcı',
     gradient: 'from-amber-500 to-orange-500',
   },
 ];
