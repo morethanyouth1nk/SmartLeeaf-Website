@@ -47,7 +47,7 @@ export default function Hero() {
             className="text-center lg:text-left"
           >
             <motion.div
-              className="mb-7 inline-flex items-center rounded-full border border-white/20 bg-white/12 px-4 py-2 text-sm font-semibold text-emerald-50 shadow-lg backdrop-blur-md"
+              className="mb-7 inline-flex items-center rounded-full border border-white/25 bg-white/12 px-4 py-2 text-sm font-extrabold text-white shadow-lg backdrop-blur-md"
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.15 }}
@@ -68,7 +68,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-emerald-50/88 md:text-xl lg:mx-0"
+              className="mx-auto mt-7 max-w-3xl text-lg font-medium leading-8 text-white/90 md:text-xl lg:mx-0"
               initial={{ opacity: 0, y: 34 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -86,20 +86,11 @@ export default function Hero() {
             >
               <motion.a
                 href="#about"
-                className="rounded-full bg-white px-8 py-4 text-base font-bold text-emerald-800 shadow-2xl shadow-black/20 transition hover:bg-lime-100"
+                className="rounded-full bg-white px-8 py-4 text-base font-extrabold text-emerald-800 shadow-2xl shadow-black/20 transition hover:bg-lime-100"
                 whileHover={{ scale: 1.04, y: -2 }}
                 whileTap={{ scale: 0.96 }}
               >
                 Explore SmartLeaf
-              </motion.a>
-
-              <motion.a
-                href="/reports"
-                className="rounded-full border border-white/25 bg-white/10 px-8 py-4 text-base font-bold text-white backdrop-blur-md transition hover:bg-white/18"
-                whileHover={{ scale: 1.04, y: -2 }}
-                whileTap={{ scale: 0.96 }}
-              >
-                View Reports
               </motion.a>
             </motion.div>
 
@@ -109,23 +100,23 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
             >
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md">
+              <div className="rounded-2xl border border-white/20 bg-white/12 p-4 backdrop-blur-md">
                 <div className="text-2xl font-extrabold text-white">AI</div>
-                <div className="mt-1 text-xs font-medium text-emerald-50/75">
+                <div className="mt-1 text-xs font-semibold text-white/80">
                   Analysis
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md">
+              <div className="rounded-2xl border border-white/20 bg-white/12 p-4 backdrop-blur-md">
                 <div className="text-2xl font-extrabold text-white">0–100</div>
-                <div className="mt-1 text-xs font-medium text-emerald-50/75">
+                <div className="mt-1 text-xs font-semibold text-white/80">
                   Health Score
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md">
+              <div className="rounded-2xl border border-white/20 bg-white/12 p-4 backdrop-blur-md">
                 <div className="text-2xl font-extrabold text-white">PDF</div>
-                <div className="mt-1 text-xs font-medium text-emerald-50/75">
+                <div className="mt-1 text-xs font-semibold text-white/80">
                   Reports
                 </div>
               </div>
@@ -140,6 +131,21 @@ export default function Hero() {
           >
             <div className="absolute -left-6 top-10 h-24 w-24 rounded-3xl bg-lime-300/30 blur-2xl" />
             <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-emerald-200/25 blur-3xl" />
+
+            <motion.div
+              className="absolute -left-8 top-16 z-20 hidden rounded-2xl border border-white/50 bg-white/95 px-4 py-3 shadow-xl backdrop-blur-md md:block"
+              animate={{ y: [0, -8, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            >
+              <p className="text-xs font-bold text-gray-500">Upload</p>
+              <p className="text-sm font-extrabold text-emerald-800">
+                leaf_image.jpg
+              </p>
+            </motion.div>
 
             <div className="glass-card relative overflow-hidden rounded-[2rem] border border-white/50 p-5 shadow-2xl shadow-black/25">
               <div className="rounded-[1.5rem] bg-slate-950 p-4 text-white">
@@ -228,21 +234,6 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-
-            <motion.div
-              className="absolute -left-4 bottom-16 rounded-2xl border border-white/40 bg-white/90 px-4 py-3 shadow-xl backdrop-blur-md"
-              animate={{ y: [0, -10, 0] }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            >
-              <p className="text-xs font-semibold text-gray-500">Upload</p>
-              <p className="text-sm font-extrabold text-emerald-800">
-                leaf_image.jpg
-              </p>
-            </motion.div>
           </motion.div>
         </div>
       </div>
