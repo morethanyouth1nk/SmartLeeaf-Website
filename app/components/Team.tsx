@@ -8,20 +8,20 @@ export default function Team() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const team = [
-    {
-      name: 'Tolga Akyol',
-      gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      name: 'Yiğit Aydın',
-      gradient: 'from-green-500 to-emerald-500',
-    },
-    {
-      name: 'Yusuf Kaynakçı',
-      gradient: 'from-emerald-500 to-teal-500',
-    },
-  ];
+const team = [
+  {
+    name: 'Tolga Akyol',
+    gradient: 'from-blue-500 to-cyan-500',
+  },
+  {
+    name: 'Yiğit Aydın',
+    gradient: 'from-green-500 to-emerald-500',
+  },
+  {
+    name: 'Yusuf Kaynakçı',
+    gradient: 'from-amber-500 to-orange-500',
+  },
+];
 
   return (
     <section
