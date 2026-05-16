@@ -28,8 +28,10 @@ export default function Navigation() {
     { name: 'Contact', href: '#contact' },
   ];
 
-  const textColor = isScrolled ? 'text-gray-800' : 'text-white';
-  const mutedColor = isScrolled ? 'text-gray-600 hover:text-emerald-700' : 'text-white/82 hover:text-white';
+  const textColor = isScrolled ? 'text-gray-900' : 'text-white';
+  const mutedColor = isScrolled
+    ? 'text-gray-700 hover:text-emerald-700'
+    : 'text-white/95 hover:text-lime-200';
 
   return (
     <motion.nav
@@ -42,7 +44,7 @@ export default function Navigation() {
         className={`mx-auto max-w-7xl rounded-full border transition-all duration-300 ${
           isScrolled
             ? 'border-emerald-100 bg-white/88 shadow-xl shadow-emerald-950/8 backdrop-blur-xl'
-            : 'border-white/16 bg-white/8 shadow-lg shadow-black/5 backdrop-blur-md'
+            : 'border-white/25 bg-white/12 shadow-lg shadow-black/10 backdrop-blur-md'
         }`}
       >
         <div className="flex h-16 items-center justify-between px-5 md:px-7">
@@ -75,7 +77,7 @@ export default function Navigation() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm font-bold transition-colors ${mutedColor}`}
+                className={`rounded-full px-4 py-2 text-sm font-extrabold tracking-tight transition-colors ${mutedColor}`}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.96 }}
               >
