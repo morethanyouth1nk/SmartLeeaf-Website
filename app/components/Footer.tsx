@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { GiPlantSeed } from 'react-icons/gi';
-import { FaEnvelope, FaFileAlt } from 'react-icons/fa';
+import { FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,12 +13,7 @@ export default function Footer() {
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Team', href: '#team' },
     { name: 'Contact', href: '#contact' },
-  ];
-
-  const documentLinks = [
     { name: 'Project Reports', href: '/reports' },
-    { name: 'Project Proposal', href: '/reports/Project_Proposal.pdf' },
-    { name: 'Final Report', href: '/reports/FinalReport.pdf' },
   ];
 
   const contactLinks = [
@@ -31,7 +26,7 @@ export default function Footer() {
       <div className="absolute bottom-[-10rem] right-[-8rem] h-96 w-96 rounded-full bg-emerald-300/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr]">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <motion.a
               href="#home"
@@ -70,29 +65,6 @@ export default function Footer() {
                     className="text-emerald-100/70 transition hover:text-white"
                     whileHover={{ x: 4 }}
                   >
-                    {link.name}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="mb-4 font-sans text-sm font-extrabold uppercase tracking-[0.2em] text-lime-200">
-              Documents
-            </h3>
-
-            <ul className="space-y-3">
-              {documentLinks.map((link) => (
-                <li key={link.name}>
-                  <motion.a
-                    href={link.href}
-                    target={link.href.endsWith('.pdf') ? '_blank' : undefined}
-                    rel={link.href.endsWith('.pdf') ? 'noopener noreferrer' : undefined}
-                    className="inline-flex items-center gap-2 text-emerald-100/70 transition hover:text-white"
-                    whileHover={{ x: 4 }}
-                  >
-                    <FaFileAlt className="text-xs" />
                     {link.name}
                   </motion.a>
                 </li>
